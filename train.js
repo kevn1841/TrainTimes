@@ -3,7 +3,8 @@
     apiKey: "AIzaSyCV6DokTt7LT4bnGi_9GTXfUAxr7tkg0Ns",
     authDomain: "train-8bda7.firebaseapp.com",
     databaseURL: "https://train-8bda7.firebaseio.com",
-    storageBucket: "train-8bda7.appspot.com"
+    storageBucket: "train-8bda7.appspot.com",
+    messagingSenderId: "70122376626"
   };
   firebase.initializeApp(config);
 
@@ -44,9 +45,10 @@
 	$("#frequencyInput").val("");
 
 	// Determine when the next train arrives.
+	return false
 });
 
-traidData.ref().on("child_added", function(childSnapshot, prevChildKey){
+trainData.ref().on("child_added", function(childSnapshot, prevChildKey){
 
 console.log(childSnapshot.val());
 
